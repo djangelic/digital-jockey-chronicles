@@ -11,54 +11,56 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-background px-4">
-      <div className="container max-w-md mx-auto text-center">
-        {/* Profile Image */}
+    <div className="min-h-screen flex flex-col items-center justify-center bg-background px-4 py-8">
+      <div className="hero-card container max-w-md mx-auto text-center p-8">
+        {/* Profile Image - Fixed to match original styling */}
         <div className="mb-6">
           <img 
             src="https://i.imgur.com/pFyFRsf.png" 
             alt="Digital Jockey Profile" 
-            className="w-24 h-24 mx-auto rounded-full"
+            className="w-24 h-24 mx-auto"
             style={{ marginBottom: '-10px' }}
           />
         </div>
 
-        {/* Main Title */}
+        {/* Main Title with Modern Gradient */}
         <div className="mb-2">
-          <h1 className="text-4xl font-bold text-brand-secondary">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-brand-primary to-primary bg-clip-text text-transparent">
             Digital Jockey
           </h1>
         </div>
 
-        {/* Subtitle */}
+        {/* Subtitle with Better Typography */}
         <div className="mb-8">
-          <div className="text-brand-secondary space-y-1">
-            <p>⛱ Traveler</p>
-            <p>💻 Hacker</p>
-            <p>👼👼 Dad</p>
-            <p>🚀 Sci-Fi book lover</p>
-            <p className="text-sm mt-4 leading-relaxed">
-              Staff Developer Advocate at n8n.io. Find my free n8n templates here:{" "}
-              <a 
-                href="https://n8n.io/creators/djangelic/" 
-                className="text-primary hover:underline"
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                https://n8n.io/creators/djangelic/
-              </a>
-            </p>
+          <div className="text-brand-secondary space-y-2 text-lg">
+            <p className="flex items-center justify-center gap-2">⛱ <span className="font-medium">Traveler</span></p>
+            <p className="flex items-center justify-center gap-2">💻 <span className="font-medium">Hacker</span></p>
+            <p className="flex items-center justify-center gap-2">👼👼 <span className="font-medium">Dad</span></p>
+            <p className="flex items-center justify-center gap-2">🚀 <span className="font-medium">Sci-Fi book lover</span></p>
+            <div className="bg-gradient-to-r from-secondary/50 to-accent/50 p-4 rounded-lg mt-6">
+              <p className="text-sm leading-relaxed">
+                Staff Developer Advocate at n8n.io. Find my free n8n templates here:{" "}
+                <a 
+                  href="https://n8n.io/creators/djangelic/" 
+                  className="text-primary hover:underline font-medium"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  https://n8n.io/creators/djangelic/
+                </a>
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Navigation Buttons */}
-        <div className="space-y-3 mb-8">
+        {/* Modern Navigation Buttons */}
+        <div className="space-y-4 mb-8">
           {navigationLinks.map((link) => (
             link.external ? (
               <a 
                 key={link.href}
                 href={link.href}
-                className="btn-dj-outline block w-full py-3 px-6 text-center font-medium rounded-lg transition-all duration-300"
+                className="btn-dj-outline block w-full py-4 px-6 text-center font-semibold rounded-xl text-lg"
               >
                 {link.label}
               </a>
@@ -66,7 +68,7 @@ const Index = () => {
               <Link 
                 key={link.href}
                 to={link.href}
-                className="btn-dj-outline block w-full py-3 px-6 text-center font-medium rounded-lg transition-all duration-300"
+                className="btn-dj-outline block w-full py-4 px-6 text-center font-semibold rounded-xl text-lg"
               >
                 {link.label}
               </Link>
@@ -74,7 +76,7 @@ const Index = () => {
           ))}
         </div>
 
-        {/* Social Links */}
+        {/* Enhanced Social Links */}
         <SocialLinks />
       </div>
     </div>
