@@ -1,40 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
+/* Digital Jockey Design System */
 @layer base {
   :root {
+    /* Digital Jockey Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 200 21% 30%; /* #324D5C equivalent */
+    
+    --brand-primary: 218 55% 17%; /* #14213D - main brand color */
+    --brand-primary-foreground: 0 0% 100%;
+    
+    --brand-secondary: 200 21% 30%; /* #324D5C - text color */
+    --brand-secondary-foreground: 0 0% 100%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 200 21% 30%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 200 21% 30%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 218 55% 17%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary-foreground: 200 21% 30%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 218 55% 17%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 218 55% 17%;
 
     --radius: 0.5rem;
 
@@ -101,5 +106,21 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('https://i.imgur.com/31HlGsb.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@layer components {
+  /* Digital Jockey Button Variants */
+  .btn-dj-outline {
+    @apply bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 ease-in-out;
+  }
+  
+  .btn-dj-social {
+    @apply text-muted-foreground hover:text-primary transition-colors duration-300;
   }
 }
