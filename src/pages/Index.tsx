@@ -23,9 +23,9 @@ const Index = () => {
           />
         </div>
 
-        {/* Main Title with Modern Gradient */}
+        {/* Main Title with Burnt Orange Gradient */}
         <div className="mb-2">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-brand-primary to-primary bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-brand-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-sm">
             Digital Jockey
           </h1>
         </div>
@@ -37,18 +37,25 @@ const Index = () => {
             <p className="flex items-center justify-center gap-2">💻 <span className="font-medium">Hacker</span></p>
             <p className="flex items-center justify-center gap-2">👼👼 <span className="font-medium">Dad</span></p>
             <p className="flex items-center justify-center gap-2">🚀 <span className="font-medium">Sci-Fi book lover</span></p>
-            <div className="bg-gradient-to-r from-secondary/50 to-accent/50 p-4 rounded-lg mt-6">
-              <p className="text-sm leading-relaxed">
-                Staff Developer Advocate at n8n.io. Find my free n8n templates here:{" "}
-                <a 
-                  href="https://n8n.io/creators/djangelic/" 
-                  className="text-primary hover:underline font-medium"
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  https://n8n.io/creators/djangelic/
-                </a>
-              </p>
+            <div className="bg-gradient-to-r from-accent/20 to-primary/20 backdrop-blur-sm p-4 rounded-xl mt-6 border border-accent/30">
+              <div className="flex items-center gap-3">
+                <img 
+                  src="https://n8n.io/favicon.ico" 
+                  alt="n8n logo" 
+                  className="w-8 h-8 flex-shrink-0"
+                />
+                <p className="text-sm leading-relaxed">
+                  Staff Developer Advocate at n8n.io. Find my free n8n templates here:{" "}
+                  <a 
+                    href="https://n8n.io/creators/djangelic/" 
+                    className="text-primary hover:text-accent font-medium hover:underline transition-colors duration-300"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    https://n8n.io/creators/djangelic/
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
